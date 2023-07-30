@@ -1,42 +1,40 @@
-
 /************ Navbar Css ************/
 nav.navbar {
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 9999;
-    transition: 0.32s ease-in-out;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
 }
 
 nav svg {
-    height: 3rem;
-    width: 3rem;
-    transition: 0.3s;
-    color: #fff;
+  height: 3rem;
+  width: 3rem;
+  transition: 0.3s;
+  color: #fff;
 }
 nav svg:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 nav svg:active {
-    transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 nav.navbar.scrolled {
-    background-color: #121212;
+  background-color: #121212;
 }
 
 nav.navbar a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-light .navbar-brand {
-    display: flex;
+  display: flex;
 }
 
-
 @media screen and (max-width: 576px) {
-    nav.navbar {
-        padding: 2rem 6rem;
-    }
+  nav.navbar {
+    padding: 2rem 6rem;
+  }
 }
