@@ -1,0 +1,164 @@
+/************ Custom Font ************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/************ Default Css ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7.5rem;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    cursor: url("./assets/img/cursor-default.png"), auto;
+}
+
+body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #121212 !important;
+    color: #fff !important;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: url("./assets/img/cursor-pointer.png"), auto !important;
+}
+
+a {
+    cursor: url("./assets/img/cursor-grab.png"), auto;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+@media (min-width:1700px) {
+    main .container {
+        max-width: 100%;
+        padding: 0 150px;
+    }
+}
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+    /* border-radius: 5px; */
+}
+
+/* Track 
+/* ::-webkit-scrollbar-track {
+	background: linear-gradient(45deg, #AA367C -5.91%, #2f9eff 111.58%);
+}
+
+/* Handle 
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(45deg, rgb(232, 255, 55) -5.91%, rgb(48, 255, 207) 111.58%);
+	border-radius: 5px;
+}
+
+/* Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(45deg, rgb(232, 255, 55) 111.58%, rgb(48, 255, 207) -5.91%);
+} */
+
+
+
+/* toastify css */
+.Toastify__toast-theme--colored.Toastify__toast--success {
+    /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%) !important; */
+    background: linear-gradient(90.21deg, rgba(74, 47, 189, 0.65) -5.91%, rgba(170, 54, 124, 0.65) 111.58%) !important;
+
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+    background: linear-gradient(90deg, rgba(243, 255, 123, 0.65) 0%, rgba(251, 255, 78, 0.65) 35%, rgba(246, 255, 87, 0.65) 100%) !important;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error {
+    background: linear-gradient(90deg, rgba(255, 123, 123, 0.65) 0%, rgba(255, 78, 78, 0.65) 35%, rgba(255, 100, 87, 0.65) 100%) !important;
+}
+
+.Toastify__progress-bar-theme--colored {
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%) !important;
+}
+
+.Toastify__close-button,
+.Toastify__toast-theme--colored.Toastify__toast--error,
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+    color: #000 !important;
+    font-weight: 500;
+}
+
+
+
+.Typewriter__wrapper,
+.Typewriter__cursor {
+    color: rgb(147, 88, 215);
+}
+
+::selection {
+    background: #9358d7;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #9358d7;
+    color: #fff;
+}
+
+
+
+
+/* responsive code */
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 45%;
+    }
+    section {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    html {
+        font-size: 40%;
+    }
+}

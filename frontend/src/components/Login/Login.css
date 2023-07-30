@@ -1,0 +1,19 @@
+.contact.login {
+    background: linear-gradient(90.21deg, #536DFE -5.91%, #00B0FF 111.58%);
+    padding: 6rem 0 20rem 0;
+}
+.contact.login h2, .contact.login img {
+    margin-top: 5rem;
+}
+button:disabled,
+button[disabled]{
+  /* border: 1px solid #999999; */
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 576px) {
+    .contact.login {
+        padding: 6rem 6rem 20rem 6rem;
+    }
+}
