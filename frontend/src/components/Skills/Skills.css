@@ -70,6 +70,8 @@
 }
 
 .skillface img {
+  width: inherit;
+  height: inherit;
   background: linear-gradient(
     90.21deg,
     rgba(74, 47, 189, 0.65) -5.91%,
