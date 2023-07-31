@@ -9,8 +9,8 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 app.use(cookieParser());
-// app.use(cors())
-app.use(cors({ credentials: true, origin: ["http://localhost:3000", "https://mkaidev-mern-portfolio.vercel.app"] }));
+
+app.use(cors({ credentials: true, origin: ["https://mkaidev-mern-portfolio.vercel.app"] }));
 
 import { userRoute } from "./routes/User.js";
 
