@@ -79,7 +79,7 @@ export const addFeedback = async (req, res) => {
     const { name, email, message } = req.body;
 
     const data = await sendMail(name, email, message);
-    // console.log(data);
+    console.log(data);
 
     // finds very first user
     const user = await User.findOne().select("-userName -password");
@@ -103,7 +103,7 @@ export const deleteFeedback = async (req, res) => {
 
     const user = await User.findOne().select("-userName -password");
 
-    const newfeedbacks = user.feedbacks.filter((item) => item._id != id);
+    const newfeedbacks = user.feedbacks.filter((item) => item._id !== id);
     user.feedbacks = newfeedbacks;
 
     await user.save();
@@ -730,7 +730,7 @@ export const deleteEducationTimeline = async (req, res) => {
 
     // educationTimeline
     const newEduTimeline = user.educationTimeline.filter(
-      (item) => item._id != id
+      (item) => item._id !== id
     );
     user.educationTimeline = newEduTimeline;
 
@@ -751,7 +751,7 @@ export const deleteWorkTimeline = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const newWorkTimeline = user.workTimeline.filter((item) => item._id != id);
+    const newWorkTimeline = user.workTimeline.filter((item) => item._id !== id);
     user.workTimeline = newWorkTimeline;
 
     await user.save();
@@ -771,7 +771,7 @@ export const deleteSkill = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const newskills = user.skills.filter((item) => item._id != id);
+    const newskills = user.skills.filter((item) => item._id !== id);
     user.skills = newskills;
 
     await user.save();
@@ -791,7 +791,7 @@ export const deleteKnownLanguage = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const newKnownLan = user.languagesKnown.filter((item) => item._id != id);
+    const newKnownLan = user.languagesKnown.filter((item) => item._id !== id);
     user.languagesKnown = newKnownLan;
 
     await user.save();
@@ -813,12 +813,12 @@ export const deleteFrontEndProject = async (req, res) => {
     const user = await User.findById(req.user._id);
 
     // find project with id to delete image from cloudinary
-    const project = user.frontendProjects.find((project) => project._id == id);
+    const project = user.frontendProjects.find((project) => project._id === id);
     await cloudinary.v2.uploader.destroy(project.image.public_id);
 
     // frontend projects
     const newFrontEndProjects = user.frontendProjects.filter(
-      (project) => project._id != id
+      (project) => project._id !== id
     );
     user.frontendProjects = newFrontEndProjects;
 
@@ -839,11 +839,11 @@ export const deleteFullStackProject = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const project = user.fullstackProjects.find((project) => project._id == id);
+    const project = user.fullstackProjects.find((project) => project._id === id);
     await cloudinary.v2.uploader.destroy(project.image.public_id);
 
     const newFullStackProjects = user.fullstackProjects.filter(
-      (project) => project._id != id
+      (project) => project._id !== id
     );
     user.fullstackProjects = newFullStackProjects;
 
@@ -864,11 +864,11 @@ export const deleteBackEndProject = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const project = user.backendProjects.find((project) => project._id == id);
+    const project = user.backendProjects.find((project) => project._id === id);
     await cloudinary.v2.uploader.destroy(project.image.public_id);
 
     const newBackendProjects = user.backendProjects.filter(
-      (project) => project._id != id
+      (project) => project._id !== id
     );
     user.backendProjects = newBackendProjects;
 
@@ -889,10 +889,10 @@ export const deleteSocialLink = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const link = user.socialLinks.find((link) => link._id == id);
+    const link = user.socialLinks.find((link) => link._id === id);
     await cloudinary.v2.uploader.destroy(link.icon.public_id);
 
-    const newSocialLinks = user.socialLinks.filter((link) => link._id != id);
+    const newSocialLinks = user.socialLinks.filter((link) => link._id !== id);
     user.socialLinks = newSocialLinks;
 
     await user.save();
@@ -913,7 +913,7 @@ export const editEducationTimeline = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const itemToEdit = user.educationTimeline.filter((item) => item._id == id);
+    const itemToEdit = user.educationTimeline.filter((item) => item._id === id);
 
     if (title) {
       itemToEdit[0].title = title;
@@ -944,7 +944,7 @@ export const editWorkTimeline = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const itemToEdit = user.workTimeline.filter((item) => item._id == id);
+    const itemToEdit = user.workTimeline.filter((item) => item._id === id);
 
     if (title) {
       itemToEdit[0].title = title;
@@ -975,7 +975,7 @@ export const editKnownLanguage = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const knownlang = user.languagesKnown.filter((item) => item._id == id);
+    const knownlang = user.languagesKnown.filter((item) => item._id === id);
 
     knownlang[0].name = name;
 
@@ -997,7 +997,7 @@ export const editSkill = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const skill = user.skills.filter((item) => item._id == id);
+    const skill = user.skills.filter((item) => item._id === id);
 
     skill[0].name = name;
 

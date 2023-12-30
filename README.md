@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 ### MERN Portfolio With Admin Dashboard | React, Cloudinary and MongoDB 🙌
-=======
+
 # mkaidev-mern-portfolio
 this project is a full stack portfolio with admin panel
 i have link a live demo about this project if you want try first
@@ -20,6 +19,7 @@ EMAIL="input your email with nodemailer here"
 PASSWORD="input your password nodemailer"
 
 CLOUDINARY_CLOUD_NAME="input your cloudinary name"
+
 CLOUDINARY_API_KEY="input your cloudinary api key"
+
 CLOUDINARY_API_SECRET="input your cloudinary api secret"
->>>>>>> 6a480ed5f1510dba022ce51ae0088faec94b3b45
