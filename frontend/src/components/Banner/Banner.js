@@ -41,12 +41,9 @@ const Banner = ({ homeDetails }) => {
               <Typewriter
                 options={{
                   strings: [
-                    "Hi, my name is Mkai Ey",
                     "Web Developer",
-                    "MERN Stack Developer",
-                    "Operator Computer",
-                    "Believe me...",
-                    "I am handsome and cool",
+                    "Operating System",
+                    "Computer Management",
                   ],
                   autoStart: true,
                   loop: true,

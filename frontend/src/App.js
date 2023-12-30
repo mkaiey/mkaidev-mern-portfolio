@@ -95,22 +95,6 @@ const App = () => {
                 isAuthenticated ? <Navigate to="/admin" /> : <LoginPage />
               }
             />
-            {/* <Route path="/admin" element={isAuthenticated ? <AdminPanel /> :<LoginPage />} />
-                            <Route path="/update/login-details" element={isAuthenticated ? <LoginDetails /> :<LoginPage />} />
-                            <Route path="/update/home-details" element={isAuthenticated ? <HomeDetails /> :<LoginPage />} />
-                            <Route path="/update/about-details" element={isAuthenticated ? <AboutDetails /> :<LoginPage />} />
-                            <Route path="/update/skill-images" element={isAuthenticated ? <SkillImages /> :<LoginPage />} />
-                            <Route path="/update/education-timeline" element={isAuthenticated ? <EducationTimeLine /> :<LoginPage />} />
-                            <Route path="/update/work-timeline" element={isAuthenticated ? <WorkTimeLine /> :<LoginPage />} />
-                            <Route path="/update/skills" element={isAuthenticated ? <Skill /> :<LoginPage />} />
-                            <Route path="/update/known-language" element={isAuthenticated ? <KnownLanguage /> :<LoginPage />} />
-                            <Route path="/update/frontend-project" element={isAuthenticated ? <FrontendProject /> :<LoginPage />} />
-                            <Route path="/update/fullstack-project" element={isAuthenticated ? <FullstackProject /> :<LoginPage />} />
-                            <Route path="/update/backend-project" element={isAuthenticated ? <BackendProject /> :<LoginPage />} />
-                            <Route path="/update/social-link" element={isAuthenticated ? <SocialMediaLinks /> :<LoginPage />} />
-
-                            <Route path="/view/feedbacks" element={isAuthenticated ? <Feedbacks /> :<LoginPage />} /> */}
-
             <Route
               element={<ProtectedRoutes isAuthenticated={isAuthenticated} />}
             >

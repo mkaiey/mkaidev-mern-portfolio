@@ -2,7 +2,7 @@ import axios from "axios";
 
 const client = axios.create({
   withCredentials: true,
-  baseURL: "https://mkaidev-portfolio.vercel.app",
+  baseURL: "http://localhost:5000",
 });
 
 export const incVisitCount = () => async (dispatch) => {

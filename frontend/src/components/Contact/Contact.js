@@ -140,7 +140,7 @@ const Contact = () => {
                 <InputTag
                   type="text"
                   name="fullName"
-                  placeholder={"First Name"}
+                  placeholder={"Full Name"}
                   value={formDetails.fullName}
                   setVal={setVal}
                   dly={0.2}

@@ -339,7 +339,7 @@ export const updateHome = async (req, res) => {
       await cloudinary.v2.uploader.destroy(user.home.background.public_id);
 
       const myCloud = await cloudinary.v2.uploader.upload(home.background, {
-        folder: "portfolio",
+        folder: "port",
       });
 
       user.home.background = {
@@ -839,7 +839,9 @@ export const deleteFullStackProject = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const project = user.fullstackProjects.find((project) => project._id === id);
+    const project = user.fullstackProjects.find(
+      (project) => project._id === id
+    );
     await cloudinary.v2.uploader.destroy(project.image.public_id);
 
     const newFullStackProjects = user.fullstackProjects.filter(
