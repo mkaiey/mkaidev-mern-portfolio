@@ -8,7 +8,7 @@ i have link a live demo about this project if you want try first
 before start you need make a file config.env on backend config folder
 and type all this environtment for run this project...
 
-PORT=3002
+PORT=5000
 
 MONGO_URI="input your mongodb here"
 
